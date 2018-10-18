@@ -6,8 +6,11 @@ import {MaterialModule} from './material.module';
 
 import {FlexLayoutModule} from '@angular/flex-layout';
 
-import { AppComponent } from './app.component';
 import {AppRouters} from './app.routes';
+
+import {DataService} from './data/data.service';
+
+import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -24,7 +27,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FlexLayoutModule,
     AppRouters,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
